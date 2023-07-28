@@ -5,6 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 10</title>
     <style>
+      @keyframes spinner-line-fade-more {
+        0%,
+        100% {
+          opacity: 0; /* minimum opacity */
+        }
+        1% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes spinner-line-fade-quick {
+        0%,
+        39%,
+        100% {
+          opacity: 0.25; /* minimum opacity */
+        }
+        40% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes spinner-line-fade-default {
+        0%,
+        100% {
+          opacity: 0.22; /* minimum opacity */
+        }
+        1% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes spinner-line-shrink {
+        0%,
+        25%,
+        100% {
+          /* minimum scale and opacity */
+          transform: scale(0.5);
+          opacity: 0.25;
+        }
+        26% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      
       body {
         font-family: sans-serif;
       }
@@ -59,7 +104,7 @@
     <select class="breed-select">
       <option data-placeholder="true"></option>
     </select>
-    <div id="my-loader" class="text-danger ldld bare"></div>
+    <div class="js-loader"></div>
     <div class="cat-info"></div>
     <script src="index.js" type="module"></script>
   </body>
